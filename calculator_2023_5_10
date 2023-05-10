@@ -1,0 +1,50 @@
+include<stdio.h>
+double Count(double number1,double number2,char operation)
+{
+    double result;
+    switch(opertion)
+    {
+    case"+":
+    result=number1+number2;
+    break;
+    
+    case"-":
+    result=number1-number2;
+    break;
+    
+    case"*":
+    result=number1*number2;
+    break;
+    
+    case"/":
+    if(number==0)
+        {
+        printf("计算无效！");
+        }
+    else
+        {
+        result=number1/number2;
+        }
+    break;
+    
+    default:
+    printf("运算符无效！");
+    break;
+    }
+    return result;
+}
+int main()
+{
+    double number1;//定义操作数
+    double number2;
+    char operation=0;//定义操作符
+    double result;//计算结果
+    printf("请输入第一个数：\n");
+    scanf("%lf",&number1);
+    printf("请输入第二个数：\n);
+    scanf("%lf",&number2);
+    printf("请输入运算符："\n);
+    scanf("%c",&operation);
+    Count(double number1,double number2,char operation);
+    return 0;
+}
