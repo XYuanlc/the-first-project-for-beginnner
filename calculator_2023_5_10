@@ -1,35 +1,37 @@
-include<stdio.h>
-double Count(double number1,double number2,char operation)
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+double Count(double number1, double number2, char operation)
 {
-    double result;
-    switch(opertion)
+    double result=0;//计算结果
+    switch (operation)
     {
-    case"+":
-    result=number1+number2;
-    break;
-    
-    case"-":
-    result=number1-number2;
-    break;
-    
-    case"*":
-    result=number1*number2;
-    break;
-    
-    case"/":
-    if(number==0)
+    case '+':
+        result = number1 + number2;
+        break;
+
+    case '-':
+        result = number1 - number2;
+        break;
+
+    case '*':
+        result = number1 * number2;
+        break;
+
+    case '/':
+        if (number2 == 0)//0不能作为被除数
         {
-        printf("计算无效！");
+            printf("计算无效！");
         }
-    else
+        else
         {
-        result=number1/number2;
+            result = number1 / number2;
         }
-    break;
-    
+        break;
+
     default:
-    printf("运算符无效！");
-    break;
+        printf("运算符无效！");
+        break;
     }
     return result;
 }
@@ -37,14 +39,11 @@ int main()
 {
     double number1;//定义操作数
     double number2;
-    char operation=0;//定义操作符
-    double result;//计算结果
-    printf("请输入第一个数：\n");
-    scanf("%lf",&number1);
-    printf("请输入第二个数：\n);
-    scanf("%lf",&number2);
-    printf("请输入运算符："\n);
-    scanf("%c",&operation);
-    Count(double number1,double number2,char operation);
+    char operation;//定义操作符
+    double result = 0;//计算结果
+    printf("请输入：数字1 运算符 数字2\n");
+    scanf("%lf%c%lf", &number1, &operation, &number2);//接收数字1 运算符 数字2
+    result = Count(number1, number2, operation);
+    printf("%lf\n", result);
     return 0;
 }
