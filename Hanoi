@@ -1,0 +1,29 @@
+include<stdio.h>
+
+void Move(char pos1,char pos2)
+{
+print("%c->%c",pos1,pos2);
+}
+
+void Hanoi(int n,char pos1,char pos2,char pos3)
+{
+    if(a==1)
+    {
+        Move(pos1,pos3);
+    }
+    else
+    {
+    Hanoi(n-1,pos1,pos3,pos2);
+    Move(pos1,pos3);
+    Hanoi(n-1,pos2,pos1,pos3);
+    }
+}
+
+int main()
+{
+    int a=0;
+    printf("请输入一个数:>");
+    scanf("%d/n",%a);
+    Hanoi(a,"A","B","C");
+    return 0;
+}
